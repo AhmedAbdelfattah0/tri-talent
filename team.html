@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - TriTalent | People-Process-Performance</title>
+    <meta name="description" content="Meet the TriTalent team: Expert HR professionals dedicated to transforming your workforce through people, process, and performance excellence.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#52A8A6',
+                        secondary: '#3d8583',
+                        accent: '#6bb9b7',
+                        dark: '#1e293b',
+                        light: '#f1f5f9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .team-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        .team-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            padding: 2rem 1.5rem;
+        }
+
+        .team-card:hover .team-card-overlay {
+            transform: translateY(0);
+        }
+
+        .team-card-image {
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover .team-card-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Header -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-16 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#About Us" class="text-dark hover:text-primary font-medium transition-colors">About Us</a>
+                    <a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="team.html" class="text-primary font-semibold transition-colors">Team</a>
+                    <a href="index.html#why-us" class="text-dark hover:text-primary font-medium transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-secondary transition-colors shadow-lg hover:shadow-xl">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-6 space-y-2">
+                    <a href="index.html#home" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Home</a>
+                    <a href="index.html#About Us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">About Us</a>
+                    <a href="index.html#services" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Services</a>
+                    <a href="team.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-light transition-colors">Team</a>
+                    <a href="index.html#why-us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Contact</a>
+                    <a href="index.html#contact" class="block mx-3 mt-4 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary transition-colors text-center">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-28 pb-8 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <span class="text-primary font-semibold">Team</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="py-16 bg-gradient-to-br from-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-dark mb-6">Meet Our Team</h1>
+            <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Our diverse team of HR experts brings decades of combined experience in transforming workplaces and
+                empowering organizations to achieve their full potential through strategic human resources management.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Grid Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+                <!-- Team Member 1 - Managing Partner -->
+                <a href="team-bob.html" class="team-card bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="relative h-80">
+                        <img src="images/bob.jpg"
+                             alt="Ehab Gawad - Managing Partner"
+                             class="team-card-image w-full h-full object-cover">
+                        <div class="team-card-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-arrow-right text-2xl mb-2"></i>
+                                <p class="font-semibold text-lg">View Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Ehab Gawad</h3>
+                        <p class="text-primary font-semibold mb-3">Managing Partner</p>
+                        <p class="text-gray-600 text-sm">Learning, Leadership & Coaching Professional with 25+ years</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 2 - HR Consultant -->
+                <a href="team-michael-chen.html" class="team-card bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+                             alt="Michael Chen - Senior HR Consultant"
+                             class="team-card-image w-full h-full object-cover">
+                        <div class="team-card-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-arrow-right text-2xl mb-2"></i>
+                                <p class="font-semibold text-lg">View Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Michael Chen</h3>
+                        <p class="text-primary font-semibold mb-3">Senior HR Consultant</p>
+                        <p class="text-gray-600 text-sm">Strategic advisor specializing in organizational transformation</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 3 - Recruitment Specialist -->
+                <a href="team-emily-rodriguez.html" class="team-card bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80"
+                             alt="Emily Rodriguez - Recruitment Specialist"
+                             class="team-card-image w-full h-full object-cover">
+                        <div class="team-card-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-arrow-right text-2xl mb-2"></i>
+                                <p class="font-semibold text-lg">View Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Emily Rodriguez</h3>
+                        <p class="text-primary font-semibold mb-3">Recruitment Specialist</p>
+                        <p class="text-gray-600 text-sm">Expert talent scout connecting companies with top performers</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 4 - Training Manager -->
+                <a href="team-david-thompson.html" class="team-card bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80"
+                             alt="David Thompson - Training & Development Manager"
+                             class="team-card-image w-full h-full object-cover">
+                        <div class="team-card-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-arrow-right text-2xl mb-2"></i>
+                                <p class="font-semibold text-lg">View Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">David Thompson</h3>
+                        <p class="text-primary font-semibold mb-3">Training & Development Manager</p>
+                        <p class="text-gray-600 text-sm">Passionate educator creating impactful learning experiences</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 5 - Talent Acquisition Lead -->
+                <a href="team-member.html?id=5" class="team-card bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?w=600&q=80"
+                             alt="Jessica Williams - Talent Acquisition Lead"
+                             class="team-card-image w-full h-full object-cover">
+                        <div class="team-card-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-arrow-right text-2xl mb-2"></i>
+                                <p class="font-semibold text-lg">View Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Jessica Williams</h3>
+                        <p class="text-primary font-semibold mb-3">Talent Acquisition Lead</p>
+                        <p class="text-gray-600 text-sm">Building high-performing teams through strategic hiring</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 6 - HR Operations Manager -->
+                <a href="team-member.html?id=6" class="team-card bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80"
+                             alt="Robert Anderson - HR Operations Manager"
+                             class="team-card-image w-full h-full object-cover">
+                        <div class="team-card-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-arrow-right text-2xl mb-2"></i>
+                                <p class="font-semibold text-lg">View Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Robert Anderson</h3>
+                        <p class="text-primary font-semibold mb-3">HR Operations Manager</p>
+                        <p class="text-gray-600 text-sm">Streamlining processes for maximum efficiency and compliance</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 7 - Compensation Analyst -->
+                <a href="team-member.html?id=7" class="team-card bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+                             alt="Amanda Foster - Compensation & Benefits Analyst"
+                             class="team-card-image w-full h-full object-cover">
+                        <div class="team-card-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-arrow-right text-2xl mb-2"></i>
+                                <p class="font-semibold text-lg">View Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Amanda Foster</h3>
+                        <p class="text-primary font-semibold mb-3">Compensation & Benefits Analyst</p>
+                        <p class="text-gray-600 text-sm">Designing competitive packages that attract and retain talent</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 8 - Employee Relations Specialist -->
+                <a href="team-member.html?id=8" class="team-card bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="relative h-80">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80"
+                             alt="James Parker - Employee Relations Specialist"
+                             class="team-card-image w-full h-full object-cover">
+                        <div class="team-card-overlay">
+                            <div class="text-white text-center">
+                                <i class="fas fa-arrow-right text-2xl mb-2"></i>
+                                <p class="font-semibold text-lg">View Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-dark mb-2">James Parker</h3>
+                        <p class="text-primary font-semibold mb-3">Employee Relations Specialist</p>
+                        <p class="text-gray-600 text-sm">Fostering positive workplace cultures and resolving conflicts</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Work with Our Experts?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                Let's connect and discuss how our team can help transform your HR operations and drive your business forward.
+            </p>
+            <a href="index.html#contact" class="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:scale-105">
+                Contact Our Team
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-6">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-12 w-auto mb-4">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner in building exceptional workforces and creating thriving workplace cultures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#About Us" class="hover:text-primary transition-colors">About Us Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="index.html#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Talent Recruitment</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Training & Development</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">HR Consulting</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Payroll Management</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Compliance & Legal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 w-5"></i>
+                            <span class="ml-3">123 Business Ave, Suite 100<br>City, ST 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-primary w-5"></i>
+                            <span class="ml-3">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary w-5"></i>
+                            <span class="ml-3">info@hrsolutions.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-primary w-5"></i>
+                            <span class="ml-3">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-center md:text-left">
+                        &copy; 2026 HR Solutions. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>

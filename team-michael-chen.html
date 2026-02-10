@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Chen - Senior HR Consultant | TriTalent</title>
+    <meta name="description" content="Meet Michael Chen, Senior HR Consultant at TriTalent. Strategic advisor specializing in organizational transformation.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#52A8A6',
+                        secondary: '#3d8583',
+                        accent: '#6bb9b7',
+                        dark: '#1e293b',
+                        light: '#f1f5f9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .team-member-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Header -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-16 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#About Us" class="text-dark hover:text-primary font-medium transition-colors">About Us</a>
+                    <a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="team.html" class="text-primary font-semibold transition-colors">Team</a>
+                    <a href="index.html#why-us" class="text-dark hover:text-primary font-medium transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-secondary transition-colors shadow-lg hover:shadow-xl">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-6 space-y-2">
+                    <a href="index.html#home" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Home</a>
+                    <a href="index.html#About Us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">About Us</a>
+                    <a href="index.html#services" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Services</a>
+                    <a href="team.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-light transition-colors">Team</a>
+                    <a href="index.html#why-us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Contact</a>
+                    <a href="index.html#contact" class="block mx-3 mt-4 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary transition-colors text-center">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-28 pb-8 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <a href="team.html" class="text-gray-600 hover:text-primary transition-colors">Team</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <span class="text-primary font-semibold">Michael Chen</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <!-- Left - Photo -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-32">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+                             alt="Michael Chen"
+                             class="w-full rounded-2xl shadow-2xl">
+
+                        <!-- Social Links -->
+                        <div class="mt-8 flex justify-center space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-white text-lg"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Twitter">
+                                <i class="fab fa-twitter text-white text-lg"></i>
+                            </a>
+                            <a href="mailto:michael.chen@hrsolutions.com" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Email">
+                                <i class="fas fa-envelope text-white text-lg"></i>
+                            </a>
+                        </div>
+
+                        <!-- Back Button -->
+                        <div class="mt-8">
+                            <a href="team.html" class="block w-full text-center bg-white border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                <i class="fas fa-arrow-left mr-2"></i> Back to Team
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right - Information -->
+                <div class="lg:col-span-2">
+                    <h1 class="text-5xl font-bold text-dark mb-4">Michael Chen</h1>
+                    <p class="text-2xl text-primary font-semibold mb-6">Senior HR Consultant</p>
+                    <div class="w-24 h-1 bg-primary mb-8"></div>
+
+                    <!-- About Us Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-user-circle text-primary mr-3"></i>
+                            About Us
+                        </h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Michael Chen is a strategic HR advisor with over 15 years of experience helping organizations navigate
+                                complex transformations and build high-performance cultures. His expertise spans organizational development,
+                                change management, and strategic workforce planning.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Known for his analytical approach and deep understanding of business operations, Michael works closely with
+                                C-suite executives to align HR strategies with business objectives. He has successfully led transformation
+                                initiatives across various industries including technology, finance, healthcare, and manufacturing.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Michael's consulting philosophy centers on data-driven decision-making and sustainable organizational change.
+                                He believes that effective HR strategies must balance employee needs with business goals to create lasting value.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-briefcase text-primary mr-3"></i>
+                            Experience & Background
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-primary pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Senior HR Consultant - HR Solutions</h3>
+                                <p class="text-primary font-semibold mb-2">2015 - Present</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Lead strategic consulting engagements for Fortune 500 clients and mid-market companies. Specialize in
+                                    organizational restructuring, culture transformation, and HR technology implementation. Successfully
+                                    guided 50+ organizations through major transformation initiatives.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Director of Organizational Development - FinTech Inc.</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2010 - 2015</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Oversaw organizational development initiatives for a rapidly growing fintech company. Designed and
+                                    implemented leadership development programs, succession planning frameworks, and performance management
+                                    systems that supported 300% company growth.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">HR Business Partner - Global Enterprises</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2008 - 2010</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Partnered with business leaders to align HR strategies with business objectives. Led workforce planning,
+                                    talent management, and organizational effectiveness initiatives across multiple business units.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-star text-primary mr-3"></i>
+                            Areas of Expertise
+                        </h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Organizational Transformation</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Change Management</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Strategic Planning</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Workforce Analytics</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Organizational Design</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Culture Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Leadership Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">HR Technology</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Process Optimization</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">M&A Integration</span>
+                        </div>
+                    </div>
+
+                    <!-- Education & Certifications -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-graduation-cap text-primary mr-3"></i>
+                            Education & Certifications
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="bg-light p-6 rounded-lg">
+                                <h3 class="text-xl font-bold text-dark mb-2">Master of Science in Organizational Psychology</h3>
+                                <p class="text-primary font-semibold mb-1">Columbia University</p>
+                                <p class="text-gray-600">Focus on Organizational Behavior and Change Management</p>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <h3 class="text-xl font-bold text-dark mb-2">Bachelor of Business Administration</h3>
+                                <p class="text-primary font-semibold mb-1">University of California, Berkeley</p>
+                                <p class="text-gray-600">Concentration in Human Resources Management</p>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <h3 class="text-xl font-bold text-dark mb-2">Certifications</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><i class="fas fa-certificate text-primary mr-2"></i>Senior Professional in Human Resources (SPHR)</li>
+                                    <li><i class="fas fa-certificate text-primary mr-2"></i>Certified Change Management Professional (CCMP)</li>
+                                    <li><i class="fas fa-certificate text-primary mr-2"></i>Professional in Human Resources (PHR)</li>
+                                    <li><i class="fas fa-certificate text-primary mr-2"></i>Six Sigma Green Belt</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope w-6 text-xl"></i>
+                                <a href="mailto:michael.chen@hrsolutions.com" class="ml-4 text-lg hover:underline">
+                                    michael.chen@hrsolutions.com
+                                </a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt w-6 text-xl"></i>
+                                <span class="ml-4 text-lg">+1 (555) 123-4567 ext. 102</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt w-6 text-xl"></i>
+                                <a href="#" class="ml-4 text-lg hover:underline">Schedule a Consultation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Team Members Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-dark text-center mb-4">Meet Other Team Members</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <a href="team-bob.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/bob.jpg"
+                         alt="Ehab Gawad"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Ehab Gawad</h3>
+                        <p class="text-primary font-semibold">Managing Partner</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 2 -->
+                <a href="team-emily-rodriguez.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
+                         alt="Emily Rodriguez"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Emily Rodriguez</h3>
+                        <p class="text-primary font-semibold">Recruitment Specialist</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 3 -->
+                <a href="team-david-thompson.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
+                         alt="David Thompson"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">David Thompson</h3>
+                        <p class="text-primary font-semibold">Training & Development Manager</p>
+                    </div>
+                </a>
+
+                <!-- View All -->
+                <a href="team.html" class="team-member-card bg-gradient-to-br from-primary to-secondary rounded-xl shadow-lg overflow-hidden flex items-center justify-center p-6 text-white hover:from-secondary hover:to-primary">
+                    <div class="text-center">
+                        <i class="fas fa-users text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">View All Team Members</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-6">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-12 w-auto mb-4">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner in building exceptional workforces and creating thriving workplace cultures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#About Us" class="hover:text-primary transition-colors">About Us Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="index.html#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Talent Recruitment</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Training & Development</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">HR Consulting</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Payroll Management</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Compliance & Legal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 w-5"></i>
+                            <span class="ml-3">123 Business Ave, Suite 100<br>City, ST 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-primary w-5"></i>
+                            <span class="ml-3">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary w-5"></i>
+                            <span class="ml-3">info@hrsolutions.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-primary w-5"></i>
+                            <span class="ml-3">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-center md:text-left">
+                        &copy; 2026 HR Solutions. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>

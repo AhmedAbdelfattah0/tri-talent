@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Skills Training | Tritalent - People-Process-Performance</title>
+    <meta name="description" content="Essential skills for professional excellence. Comprehensive soft skills training programs covering communication, emotional intelligence, and collaboration.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#52A8A6',
+                        secondary: '#3d8583',
+                        accent: '#6bb9b7',
+                        dark: '#1e293b',
+                        light: '#f1f5f9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Header -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-16 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#About Us" class="text-dark hover:text-primary font-medium transition-colors">About Us</a>
+                    <a href="index.html#services" class="text-primary font-medium transition-colors">Services</a>
+                    <a href="team.html" class="text-dark hover:text-primary font-medium transition-colors">Team</a>
+                    <a href="index.html#why-us" class="text-dark hover:text-primary font-medium transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-secondary transition-colors shadow-lg hover:shadow-xl">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-6 space-y-2">
+                    <a href="index.html#home" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Home</a>
+                    <a href="index.html#About Us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">About Us</a>
+                    <a href="index.html#services" class="block px-3 py-3 rounded-md text-base font-medium text-primary hover:bg-light transition-colors">Services</a>
+                    <a href="team.html" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Team</a>
+                    <a href="index.html#why-us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Contact</a>
+                    <a href="index.html#contact" class="block mx-3 mt-4 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary transition-colors text-center">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20">
+        <div class="relative w-full h-[500px]">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1920&q=80"
+                 alt="Soft Skills Training - Professional Development"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 gradient-overlay"></div>
+            <div class="absolute inset-0 flex items-center">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-3xl">
+                        <!-- Breadcrumb -->
+                        <nav class="mb-6">
+                            <ol class="flex items-center space-x-2 text-sm text-gray-300">
+                                <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                                <li><i class="fas fa-chevron-right text-xs"></i></li>
+                                <li><a href="index.html#services" class="hover:text-white transition-colors">Services</a></li>
+                                <li><i class="fas fa-chevron-right text-xs"></i></li>
+                                <li class="text-white font-medium">Soft Skills Training</li>
+                            </ol>
+                        </nav>
+
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                            Soft Skills Training
+                        </h1>
+                        <p class="text-xl md:text-2xl text-gray-200 leading-relaxed">
+                            Essential Skills for Professional Excellence
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+                    Master the Skills That Matter Most
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Our Soft Skills Training programs build the critical interpersonal and professional capabilities that drive
+                    individual effectiveness, team collaboration, and organizational success. From communication and emotional
+                    intelligence to time management and problem-solving, we develop the essential skills that enable professionals
+                    at all levels to excel in today's dynamic workplace.
+                </p>
+            </div>
+
+            <!-- Key Benefits Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 hover-lift border border-purple-100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Enhanced Workplace Productivity</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Improve time management, priority-setting, and energy management to accomplish more with less stress and greater focus.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 hover-lift border border-blue-100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Better Collaboration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Strengthen communication, influence, and collaboration skills to work more effectively across teams and stakeholders.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 hover-lift border border-green-100">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Improved Problem-Solving</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Develop critical thinking, creative problem-solving, and decision-making capabilities to navigate complex challenges effectively.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">What's Included</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive soft skills development programs covering the most critical professional capabilities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-comments text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Communication & Influence</h3>
+                        <p class="text-gray-600">Powerful communication, active listening, persuasion, storytelling, and influencing skills for greater impact and effectiveness.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-clock text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Time, Energy & Priority Management</h3>
+                        <p class="text-gray-600">Strategies for managing time, energy, and priorities effectively to maximize productivity and achieve meaningful results.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-heart text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Emotional Intelligence</h3>
+                        <p class="text-gray-600">Self-awareness, self-regulation, empathy, and social skills to build stronger relationships and navigate interpersonal dynamics.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-puzzle-piece text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Problem Solving & Critical Thinking</h3>
+                        <p class="text-gray-600">Analytical thinking, creative problem-solving, root cause analysis, and decision-making frameworks for complex challenges.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-md hover-lift flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-users text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-dark mb-2">Collaboration & Conflict Management</h3>
+                        <p class="text-gray-600">Effective collaboration, constructive conflict resolution, negotiation, and building productive working relationships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Training Approach</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Practical, engaging, and results-focused training designed for immediate application and lasting impact.
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent"></div>
+
+                <!-- Steps -->
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
+                            <div class="inline-block md:block">
+                                <h3 class="text-2xl font-bold text-dark mb-3">1. Needs Assessment</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    We identify specific skill gaps, organizational priorities, and participant development needs to customize program content and focus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">
+                            <i class="fas fa-search text-white text-xl"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">
+                            <i class="fas fa-chalkboard-teacher text-white text-xl"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 text-center md:text-left">
+                            <div class="inline-block md:block">
+                                <h3 class="text-2xl font-bold text-dark mb-3">2. Interactive Workshops</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Engaging training sessions combine theory, practice, case studies, role-plays, and group exercises for active learning and skill development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
+                            <div class="inline-block md:block">
+                                <h3 class="text-2xl font-bold text-dark mb-3">3. Real-World Application</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Participants practice new skills through workplace scenarios, action planning, and immediate application to real challenges they face.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">
+                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">
+                            <i class="fas fa-user-friends text-white text-xl"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0 text-center md:text-left">
+                            <div class="inline-block md:block">
+                                <h3 class="text-2xl font-bold text-dark mb-3">4. Peer Learning & Feedback</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Participants learn from each other through group discussions, peer feedback, and collaborative problem-solving activities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 text-center md:text-right">
+                            <div class="inline-block md:block">
+                                <h3 class="text-2xl font-bold text-dark mb-3">5. Tools & Reinforcement</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Participants receive practical tools, job aids, and ongoing resources to reinforce learning and sustain skill development over time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">
+                            <i class="fas fa-toolbox text-white text-xl"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Benefits Section -->
+    <section class="py-20 bg-gradient-to-br from-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Who Benefits</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Individual Contributors</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Professionals seeking to enhance their effectiveness, collaboration, and career advancement potential through essential skills development.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Team Leaders</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Managers and team leads who need stronger communication, influence, and people skills to lead teams more effectively.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Professionals at All Levels</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Employees across all functions and levels who benefit from developing core professional capabilities for workplace success.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Scenarios -->
+            <div class="mt-16 bg-white rounded-2xl p-10 shadow-lg">
+                <h3 class="text-2xl font-bold text-dark mb-8 text-center">Ideal Scenarios</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check-circle text-purple-600 text-xl mt-1"></i>
+                        <p class="text-gray-600">Upskilling employees with critical professional capabilities for performance improvement</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check-circle text-purple-600 text-xl mt-1"></i>
+                        <p class="text-gray-600">Onboarding new employees with foundational workplace skills and competencies</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check-circle text-purple-600 text-xl mt-1"></i>
+                        <p class="text-gray-600">Building collaboration and communication across cross-functional teams</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check-circle text-purple-600 text-xl mt-1"></i>
+                        <p class="text-gray-600">Addressing performance gaps related to interpersonal effectiveness or productivity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expected Outcomes Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Expected Outcomes</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Tangible improvements in individual capability, team collaboration, and organizational performance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 border border-purple-100">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-chart-line text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Enhanced Workplace Productivity</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Boost individual productivity by 20-30% through better time management, priority-setting, and focus strategies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-handshake text-primary text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Better Collaboration</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Strengthen cross-functional collaboration, reduce conflict, and improve team dynamics through enhanced interpersonal skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 border border-green-100">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-lightbulb text-green-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Improved Problem-Solving</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Develop stronger analytical and creative problem-solving capabilities, leading to faster resolution of complex challenges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 border border-orange-100">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-smile text-orange-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Higher Employee Engagement</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Increase employee confidence, satisfaction, and engagement through capability-building and professional growth opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-10 text-white">
+                <h3 class="text-2xl font-bold mb-8 text-center">Key Success Metrics</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold mb-2">25%</div>
+                        <p class="text-blue-100">Productivity Improvement</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">90%</div>
+                        <p class="text-blue-100">Skill Application Rate</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">30%</div>
+                        <p class="text-blue-100">Collaboration Increase</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">95%</div>
+                        <p class="text-blue-100">Participant Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Tritalent Section -->
+    <section class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Why Tritalent</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-rocket text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Engaging & Interactive</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our training sessions are highly interactive, practical, and engaging, ensuring participants stay focused and apply what they learn.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-briefcase text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Real-World Application</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We focus on immediate application through workplace scenarios, action planning, and tools that participants use right away.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chart-bar text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Measurable Impact</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We track behavior change and performance improvement to ensure training translates into measurable business results.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Services Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Related Services</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="leadership-development.html" class="group">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 h-full hover-lift border border-gray-100">
+                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-user-graduate text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors">Leadership Development Programs</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Comprehensive programs from first-time managers to senior executives, building leadership capabilities at every level.
+                        </p>
+                        <span class="text-green-600 font-semibold group-hover:text-green-700 transition-colors inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="team-building.html" class="group">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 h-full hover-lift border border-gray-100">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-users text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors">Team Building & Experiential Events</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Unite teams through purposeful experiences that enhance cohesion, collaboration, and aligned goals.
+                        </p>
+                        <span class="text-yellow-600 font-semibold group-hover:text-yellow-700 transition-colors inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="culture-engagement.html" class="group">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 h-full hover-lift border border-gray-100">
+                        <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                            <i class="fas fa-heart text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors">Culture & Engagement Programs</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Transform culture, elevate engagement, and strengthen values alignment across your organization.
+                        </p>
+                        <span class="text-red-600 font-semibold group-hover:text-red-700 transition-colors inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Develop Essential Professional Skills?
+            </h2>
+            <p class="text-xl text-blue-100 mb-10 leading-relaxed">
+                Schedule a consultation to discuss how our Soft Skills Training programs can enhance capability and drive performance across your organization.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all shadow-xl hover:scale-105">
+                    Schedule Consultation
+                </a>
+                <a href="mailto:info@tri-talent.com" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-all shadow-xl">
+                    Email Us
+                </a>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-white">
+                <div class="flex items-center">
+                    <i class="fas fa-envelope mr-3 text-xl"></i>
+                    <span class="text-lg">info@tri-talent.com</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-globe mr-3 text-xl"></i>
+                    <span class="text-lg">www.tri-talent.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-6">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-12 w-auto mb-4">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Empowering talents to everyday win. Integrating people, process, and performance into one operating system
+                        for sustainable success.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#About Us" class="hover:text-primary transition-colors">About Us Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="index.html#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="assessment-centers.html" class="hover:text-primary transition-colors">Assessment Centers</a></li>
+                        <li><a href="leadership-development.html" class="hover:text-primary transition-colors">Leadership Development</a></li>
+                        <li><a href="soft-skills-training.html" class="hover:text-primary transition-colors">Soft Skills Training</a></li>
+                        <li><a href="executive-coaching.html" class="hover:text-primary transition-colors">Executive Coaching</a></li>
+                        <li><a href="culture-engagement.html" class="hover:text-primary transition-colors">Culture & Engagement</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 w-5"></i>
+                            <span class="ml-3">Operating across<br>Saudi Arabia & the GCC</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary w-5"></i>
+                            <span class="ml-3">info@tri-talent.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe text-primary w-5"></i>
+                            <span class="ml-3">www.tri-talent.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-center md:text-left">
+                        &copy; 2026 Tritalent. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
