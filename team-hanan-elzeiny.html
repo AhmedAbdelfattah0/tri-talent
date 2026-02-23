@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/tritalent-logo.png">
+    <title>Hanan Gharib Elzeiny, DBA - HR Consultant & Trainer | TriTalent</title>
+    <meta name="description" content="Meet Hanan Gharib Elzeiny, DBA, Senior HR Consultant, Trainer, and Strategic Planning Facilitator at TriTalent. 30+ years of experience across HR, performance management, and organizational development.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#52A8A6',
+                        secondary: '#3d8583',
+                        accent: '#6bb9b7',
+                        dark: '#1e293b',
+                        light: '#f1f5f9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .mobile-menu.active { max-height: 500px; }
+        .team-member-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .team-member-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Header -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-16 w-auto">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#About Us" class="text-dark hover:text-primary font-medium transition-colors">About Us</a>
+                    <a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="team.html" class="text-primary font-semibold transition-colors">Team</a>
+                    <a href="index.html#why-us" class="text-dark hover:text-primary font-medium transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-secondary transition-colors shadow-lg hover:shadow-xl">Get Started</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-6 space-y-2">
+                    <a href="index.html#home" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Home</a>
+                    <a href="index.html#About Us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">About Us</a>
+                    <a href="index.html#services" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Services</a>
+                    <a href="team.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-light transition-colors">Team</a>
+                    <a href="index.html#why-us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Contact</a>
+                    <a href="index.html#contact" class="block mx-3 mt-4 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary transition-colors text-center">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-28 pb-8 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition-colors"><i class="fas fa-home"></i> Home</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <a href="team.html" class="text-gray-600 hover:text-primary transition-colors">Team</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <span class="text-primary font-semibold">Hanan Gharib Elzeiny</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+
+                <!-- Left - Photo -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-32">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&q=80"
+                             alt="Hanan Gharib Elzeiny"
+                             class="w-full rounded-2xl shadow-2xl">
+
+                        <div class="mt-8 flex justify-center space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-white text-lg"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Twitter">
+                                <i class="fab fa-twitter text-white text-lg"></i>
+                            </a>
+                            <a href="mailto:info@tri-talent.com" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Email">
+                                <i class="fas fa-envelope text-white text-lg"></i>
+                            </a>
+                        </div>
+
+                        <div class="mt-8">
+                            <a href="team.html" class="block w-full text-center bg-white border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                <i class="fas fa-arrow-left mr-2"></i> Back to Team
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right - Information -->
+                <div class="lg:col-span-2">
+                    <h1 class="text-5xl font-bold text-dark mb-4">Hanan Gharib Elzeiny, DBA</h1>
+                    <p class="text-2xl text-primary font-semibold mb-2">HR Consultant & Trainer</p>
+                    <p class="text-lg text-gray-500 font-medium mb-6">Strategic Planning Facilitator · Trainer of Trainers</p>
+                    <div class="w-24 h-1 bg-primary mb-8"></div>
+
+                    <!-- About Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-user-circle text-primary mr-3"></i>
+                            About
+                        </h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Hanan Gharib Elzeiny is a Senior HR Expert with over 30 years of experience across diverse
+                                business sectors. She brings together deep technical HR knowledge, academic credentials to
+                                doctorate level, and a distinguished record as a trainer and facilitator to deliver measurable
+                                organizational change.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Her practice centers on Strategic Planning Facilitation — having guided more than 20 companies
+                                through structured strategic planning processes — alongside performance management systems design,
+                                competency framework development, and HR policy architecture. She is a certified Trainer of Trainers,
+                                having built internal training capacity within organizations and delivered more than 30 rounds of
+                                the HR Management Diploma in both Arabic and English.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Hanan is a certified Eunoia® Personal Construct Assessor (Sweden), reflecting her commitment to
+                                evidence-based people assessment and culture change. Her expertise spans both private sector
+                                organizations and operational environments including Lean Manufacturing settings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Impact by Numbers -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-chart-bar text-primary mr-3"></i>
+                            Impact by Numbers
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 text-white text-center">
+                                <p class="text-5xl font-bold mb-2">30+</p>
+                                <p class="text-base font-semibold opacity-90">Years of Experience</p>
+                                <p class="text-sm opacity-75 mt-1">Across diverse business sectors</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 text-white text-center">
+                                <p class="text-5xl font-bold mb-2">20+</p>
+                                <p class="text-base font-semibold opacity-90">Companies Facilitated</p>
+                                <p class="text-sm opacity-75 mt-1">Strategic planning engagements</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 text-white text-center">
+                                <p class="text-5xl font-bold mb-2">30+</p>
+                                <p class="text-base font-semibold opacity-90">Training Rounds</p>
+                                <p class="text-sm opacity-75 mt-1">HR Management Diploma · Arabic & English</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Areas of Expertise -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-star text-primary mr-3"></i>
+                            Areas of Expertise
+                        </h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Strategic Planning Facilitation</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Performance Management</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Competency Framework Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Competency-Based HR Systems</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Learning & Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">HR Policies Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">HR Audits</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Trainer of Trainers (ToT)</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Training Delivery</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Culture Change</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Lean Manufacturing</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Monitoring & Control</span>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-graduation-cap text-primary mr-3"></i>
+                            Academic Qualifications &amp; Certifications
+                        </h2>
+
+                        <h3 class="text-xl font-bold text-dark mb-4">Academic Qualifications</h3>
+                        <div class="space-y-4 mb-8">
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Doctorate in Business Administration (DBA)</h4>
+                                        <p class="text-sm text-gray-600">International Business School of Scandinavia · Denmark</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Masters of Human Resource Education</h4>
+                                        <p class="text-sm text-gray-600">University of Louisville · USA</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Executive Masters in Business Administration</h4>
+                                        <p class="text-sm text-gray-600">Jack Welch Management Institute</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Total Quality Management Diploma</h4>
+                                        <p class="text-sm text-gray-600">American University in Cairo</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Certified KPI Professional</h4>
+                                        <p class="text-sm text-gray-600">KPI Institute</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-dark mb-4">Professional Certifications</h3>
+                        <div class="space-y-4">
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Eunoia® Personal Construct Certified Assessor</h4>
+                                        <p class="text-sm text-gray-600">Sweden</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Strategic Planning &amp; Strategic Management</h4>
+                                        <p class="text-sm text-gray-600">KPI Institute</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Building Balanced Scorecard</h4>
+                                        <p class="text-sm text-gray-600">KPI Institute</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">KPIs Certification</h4>
+                                        <p class="text-sm text-gray-600">KPI Institute</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Master Trainer (Trainer of Trainers)</h4>
+                                        <p class="text-sm text-gray-600">ToT delivery for Trainers to establish internal training capacity</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-briefcase w-6 text-xl mt-1"></i>
+                                <div class="ml-4">
+                                    <p class="text-sm opacity-90">Position</p>
+                                    <p class="text-lg font-semibold">HR Consultant, Trainer &amp; Strategic Planning Facilitator</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope w-6 text-xl"></i>
+                                <a href="mailto:info@tri-talent.com" class="ml-4 text-lg hover:underline">info@tri-talent.com</a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-globe w-6 text-xl"></i>
+                                <a href="https://tri-talent.com/" target="_blank" class="ml-4 text-lg hover:underline">www.tri-talent.com</a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt w-6 text-xl"></i>
+                                <a href="#" class="ml-4 text-lg hover:underline">Schedule a Meeting</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Team Members Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-dark text-center mb-4">Meet Other Team Members</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="team-bob.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/bob.jpg" alt="Ehab Gawad" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Ehab Gawad</h3>
+                        <p class="text-primary font-semibold">Managing Partner</p>
+                    </div>
+                </a>
+                <a href="team-amr-nada.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/amr_nada.jpeg" alt="Dr. Amr Nada" class="w-full h-64 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Dr. Amr Nada</h3>
+                        <p class="text-primary font-semibold">International Master Trainer</p>
+                    </div>
+                </a>
+                <a href="team-maryam-alyamani.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&q=80" alt="Maryam Alyamani" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Maryam Alyamani</h3>
+                        <p class="text-primary font-semibold">Marketing Communications Expert</p>
+                    </div>
+                </a>
+                <a href="team.html" class="team-member-card bg-gradient-to-br from-primary to-secondary rounded-xl shadow-lg overflow-hidden flex items-center justify-center p-6 text-white hover:from-secondary hover:to-primary">
+                    <div class="text-center">
+                        <i class="fas fa-users text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">View All Team Members</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="mb-6"><img src="images/tritalent-logo.png" alt="TriTalent" class="h-12 w-auto mb-4"></div>
+                    <p class="text-gray-400 leading-relaxed mb-6">Your trusted partner in building exceptional workforces and creating thriving workplace cultures.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Twitter"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-white"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#About Us" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="index.html#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="assessment-centers.html" class="hover:text-primary transition-colors">Assessment Centers</a></li>
+                        <li><a href="leadership-development.html" class="hover:text-primary transition-colors">Leadership Development</a></li>
+                        <li><a href="soft-skills-training.html" class="hover:text-primary transition-colors">Soft Skills Training</a></li>
+                        <li><a href="culture-engagement.html" class="hover:text-primary transition-colors">Culture &amp; Engagement</a></li>
+                        <li><a href="executive-coaching.html" class="hover:text-primary transition-colors">Executive Coaching</a></li>
+                        <li><a href="talent-development-consulting.html" class="hover:text-primary transition-colors">Talent Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt text-primary mt-1 w-5"></i><span class="ml-3">Saudi Arabia &amp; the GCC</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-primary w-5"></i><a href="mailto:info@tri-talent.com" class="ml-3 hover:text-primary transition-colors">info@tri-talent.com</a></li>
+                        <li class="flex items-center"><i class="fas fa-globe text-primary w-5"></i><a href="https://tri-talent.com/" target="_blank" class="ml-3 hover:text-primary transition-colors">www.tri-talent.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-center md:text-left">&copy; 2026 Tritalent. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) navbar.classList.add('shadow-xl');
+            else navbar.classList.remove('shadow-xl');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/tritalent-logo.png">
+    <title>Dr. Amr Nada - International Master Trainer | TriTalent</title>
+    <meta name="description" content="Meet Dr. Amr Nada, International Master Trainer, Executive Educator, and CEO of Leap Communications at TriTalent. 30+ years of experience across FMCG, retail, and executive education.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#52A8A6',
+                        secondary: '#3d8583',
+                        accent: '#6bb9b7',
+                        dark: '#1e293b',
+                        light: '#f1f5f9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .team-member-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Header -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-16 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#About Us" class="text-dark hover:text-primary font-medium transition-colors">About Us</a>
+                    <a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="team.html" class="text-primary font-semibold transition-colors">Team</a>
+                    <a href="index.html#why-us" class="text-dark hover:text-primary font-medium transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-secondary transition-colors shadow-lg hover:shadow-xl">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-6 space-y-2">
+                    <a href="index.html#home" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Home</a>
+                    <a href="index.html#About Us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">About Us</a>
+                    <a href="index.html#services" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Services</a>
+                    <a href="team.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-light transition-colors">Team</a>
+                    <a href="index.html#why-us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Contact</a>
+                    <a href="index.html#contact" class="block mx-3 mt-4 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary transition-colors text-center">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-28 pb-8 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <a href="team.html" class="text-gray-600 hover:text-primary transition-colors">Team</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <span class="text-primary font-semibold">Dr. Amr Nada</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <!-- Left - Photo -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-32">
+                        <img src="images/amr_nada.jpeg"
+                             alt="Dr. Amr Nada"
+                             class="w-full rounded-2xl shadow-2xl">
+
+                        <!-- Social Links -->
+                        <div class="mt-8 flex justify-center space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-white text-lg"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Twitter">
+                                <i class="fab fa-twitter text-white text-lg"></i>
+                            </a>
+                            <a href="mailto:a.nada@tri-talent.com" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Email">
+                                <i class="fas fa-envelope text-white text-lg"></i>
+                            </a>
+                        </div>
+
+                        <!-- Back Button -->
+                        <div class="mt-8">
+                            <a href="team.html" class="block w-full text-center bg-white border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                <i class="fas fa-arrow-left mr-2"></i> Back to Team
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right - Information -->
+                <div class="lg:col-span-2">
+                    <h1 class="text-5xl font-bold text-dark mb-4">Dr. Amr Nada</h1>
+                    <p class="text-2xl text-primary font-semibold mb-2">International Master Trainer & Executive Educator</p>
+                    <p class="text-lg text-gray-500 font-medium mb-6">CEO – Leap Communications</p>
+                    <div class="w-24 h-1 bg-primary mb-8"></div>
+
+                    <!-- About Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-user-circle text-primary mr-3"></i>
+                            About
+                        </h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Dr. Amr Nada is an International Master Trainer, executive educator, and commercial leader with more than
+                                thirty years of professional experience across FMCG, retail, distribution, and marketing services. He combines
+                                multinational executive leadership experience at Procter &amp; Gamble, Pepsi Al Jomaih, and major retail groups
+                                with deep academic and executive training practice.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                He designs and delivers executive and management development programs in sales excellence, leadership,
+                                negotiation, communication, and governance. He teaches across undergraduate, graduate, MBA, and executive
+                                education platforms, and has trained professionals and leadership teams across more than one hundred
+                                organizations in the Middle East and Central Eastern Europe.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                His work integrates evidence-based training frameworks with real operating business experience, making him
+                                a trusted partner for organizations seeking measurable capability transformation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Executive & Corporate Experience -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-briefcase text-primary mr-3"></i>
+                            Executive &amp; Corporate Leadership
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-primary pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">CEO — Leap Communications</h3>
+                                <p class="text-primary font-semibold mb-2">2011 – Present</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Leads a sales and marketing consultancy and advertising solutions firm, delivering commercial capability
+                                    programs, executive training, and strategic advisory services across regional markets.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">CEO — Awlad Ragab Group</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2021</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Led one of Egypt's established retail and supermarket chains, overseeing commercial operations,
+                                    organizational performance, and strategic direction.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">General Manager — Easy Care</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2011</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Managed full general management responsibilities including operations, commercial performance,
+                                    and team leadership.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">General Manager — Dina Farms (ICDP)</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2010</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Directed general management for a leading FMCG distribution and production enterprise, driving
+                                    operational efficiency and commercial growth.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Direct Sales Director — Pepsi Al Jomaih</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2008 – 2009 · Saudi Arabia</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Headed direct sales operations for one of the region's largest beverage distributors, managing
+                                    sales force effectiveness, channel strategy, and territory performance.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Regional &amp; Country Leadership Roles — Procter &amp; Gamble</h3>
+                                <p class="text-gray-500 font-semibold mb-2">1995 – 2008</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Held successive regional and country leadership positions covering sales, trade marketing,
+                                    distributor management, modern trade, and regional commercial systems across multiple markets.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic & Executive Education Experience -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-chalkboard-teacher text-primary mr-3"></i>
+                            Academic &amp; Executive Education
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-primary pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Senior Instructor — AUC, IMC Department</h3>
+                                <p class="text-primary font-semibold mb-2">Spring 2026 · Undergraduate</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Delivers Agency Operations coursework within the Integrated Marketing Communications department
+                                    at the American University in Cairo.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Program Lead — AUC School of Engineering</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2019 – 2025 · Online Leadership &amp; HR Graduate Program</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Led a multi-year graduate program in leadership and HR for engineering professionals, developing
+                                    structured curricula combining academic rigor with applied business practice.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Faculty Lecturer — AUC School of Business</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2015 – Present · Marketing, International Marketing, Sales</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Teaches marketing, international marketing, and sales management at undergraduate and graduate levels,
+                                    integrating practitioner experience into academic frameworks.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Faculty Lecturer — AUC School of Business</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2008 – 2010 · Leadership &amp; Management</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Delivered leadership and management courses, combining multinational operating experience
+                                    with structured academic delivery.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Executive Trainer — AUC School of Business &amp; School of Continuing Education</h3>
+                                <p class="text-gray-500 font-semibold mb-2">Ongoing · Corporate &amp; Executive Programs</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Designs and delivers executive and corporate education programs across AUC platforms,
+                                    with dedicated programs serving corporate clients primarily in Saudi Arabia.
+                                </p>
+                            </div>
+
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-2">Entrepreneurship Instructor — Nile Schools</h3>
+                                <p class="text-gray-500 font-semibold mb-2">2024 – 2025</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Delivered entrepreneurship education to secondary school students, building foundational
+                                    business thinking and innovation mindsets.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Areas of Expertise -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-star text-primary mr-3"></i>
+                            Areas of Expertise
+                        </h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Sales Excellence</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Leadership Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Executive Training</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Negotiation</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Communication</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Corporate Governance</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Trade Marketing</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Commercial Strategy</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Management Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Talent Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">FMCG & Retail</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Lateral Thinking</span>
+                        </div>
+                    </div>
+
+                    <!-- Certifications & Education -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-graduation-cap text-primary mr-3"></i>
+                            Competence &amp; Certificates
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Dr. Nada holds a comprehensive portfolio of professional trainer certifications from globally recognised
+                            bodies, combined with strong academic credentials up to Doctorate level.
+                        </p>
+
+                        <!-- Academic Credentials -->
+                        <h3 class="text-xl font-bold text-dark mb-4">Academic Credentials</h3>
+                        <div class="space-y-4 mb-8">
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Doctorate in Business Administration (DBA)</h4>
+                                        <p class="text-sm text-gray-600">Marketing · Royal British College · Completed December 2025</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">MBA</h4>
+                                        <p class="text-sm text-gray-600">Helwan University · Top of Class — High Honors</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">BA — Business Administration</h4>
+                                        <p class="text-sm text-gray-600">American University in Cairo · Dean's Honor List</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trainer Certifications -->
+                        <h3 class="text-xl font-bold text-dark mb-4">Master Trainer &amp; Training Certifications</h3>
+                        <div class="space-y-4">
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">SPIN Selling — Certified Trainer</h4>
+                                        <p class="text-sm text-gray-600">Huthwaite · UK · Since 2006</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">John Maxwell Leadership — Certified Trainer</h4>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Who Moved My Cheese — Certified Trainer</h4>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Advanced Train the Trainer</h4>
+                                        <p class="text-sm text-gray-600">American University in Cairo (AUC)</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Global Application Trainer</h4>
+                                        <p class="text-sm text-gray-600">Procter &amp; Gamble</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Lateral Thinking</h4>
+                                        <p class="text-sm text-gray-600">Edward de Bono</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Learner Centered Teaching Certification</h4>
+                                        <p class="text-sm text-gray-600">American University in Cairo (AUC) · 2011</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-certificate text-primary text-2xl mr-4"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Presenter College</h4>
+                                        <p class="text-sm text-gray-600">Ministry of Awqaf · 2024</p>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-briefcase w-6 text-xl mt-1"></i>
+                                <div class="ml-4">
+                                    <p class="text-sm opacity-90">Position</p>
+                                    <p class="text-lg font-semibold">International Master Trainer &amp; Executive Educator</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope w-6 text-xl"></i>
+                                <a href="mailto:a.nada@tri-talent.com" class="ml-4 text-lg hover:underline">
+                                    a.nada@tri-talent.com
+                                </a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-globe w-6 text-xl"></i>
+                                <a href="https://tri-talent.com/" target="_blank" class="ml-4 text-lg hover:underline">
+                                    www.tri-talent.com
+                                </a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt w-6 text-xl"></i>
+                                <a href="#" class="ml-4 text-lg hover:underline">Schedule a Meeting</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Team Members Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-dark text-center mb-4">Meet Other Team Members</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <a href="team-bob.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/bob.jpg"
+                         alt="Ehab Gawad"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Ehab Gawad</h3>
+                        <p class="text-primary font-semibold">Managing Partner</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 2 -->
+                <a href="team-michael-chen.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                         alt="Michael Chen"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Michael Chen</h3>
+                        <p class="text-primary font-semibold">Senior HR Consultant</p>
+                    </div>
+                </a>
+
+                <!-- Team Member 3 -->
+                <a href="team-emily-rodriguez.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
+                         alt="Emily Rodriguez"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Emily Rodriguez</h3>
+                        <p class="text-primary font-semibold">Recruitment Specialist</p>
+                    </div>
+                </a>
+
+                <!-- View All -->
+                <a href="team.html" class="team-member-card bg-gradient-to-br from-primary to-secondary rounded-xl shadow-lg overflow-hidden flex items-center justify-center p-6 text-white hover:from-secondary hover:to-primary">
+                    <div class="text-center">
+                        <i class="fas fa-users text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">View All Team Members</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-6">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-12 w-auto mb-4">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner in building exceptional workforces and creating thriving workplace cultures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#About Us" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="index.html#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="assessment-centers.html" class="hover:text-primary transition-colors">Assessment Centers</a></li>
+                        <li><a href="leadership-development.html" class="hover:text-primary transition-colors">Leadership Development</a></li>
+                        <li><a href="soft-skills-training.html" class="hover:text-primary transition-colors">Soft Skills Training</a></li>
+                        <li><a href="culture-engagement.html" class="hover:text-primary transition-colors">Culture &amp; Engagement</a></li>
+                        <li><a href="executive-coaching.html" class="hover:text-primary transition-colors">Executive Coaching</a></li>
+                        <li><a href="talent-development-consulting.html" class="hover:text-primary transition-colors">Talent Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 w-5"></i>
+                            <span class="ml-3">Saudi Arabia &amp; the GCC</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary w-5"></i>
+                            <a href="mailto:info@tri-talent.com" class="ml-3 hover:text-primary transition-colors">info@tri-talent.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe text-primary w-5"></i>
+                            <a href="https://tri-talent.com/" target="_blank" class="ml-3 hover:text-primary transition-colors">www.tri-talent.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-center md:text-left">
+                        &copy; 2026 Tritalent. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/tritalent-logo.png">
+    <title>Maryam Alyamani - Marketing Communications Expert | TriTalent</title>
+    <meta name="description" content="Meet Maryam Alyamani, Marketing Communications Expert at TriTalent. 16+ years across journalism, PR, digital marketing, and brand development. Founder of The M-HUB Agency.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#52A8A6',
+                        secondary: '#3d8583',
+                        accent: '#6bb9b7',
+                        dark: '#1e293b',
+                        light: '#f1f5f9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .team-member-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Header -->
+    <nav class="fixed w-full top-0 z-50 bg-white shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-16 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="index.html#About Us" class="text-dark hover:text-primary font-medium transition-colors">About Us</a>
+                    <a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="team.html" class="text-primary font-semibold transition-colors">Team</a>
+                    <a href="index.html#why-us" class="text-dark hover:text-primary font-medium transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+                    <a href="index.html#contact" class="bg-primary text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-secondary transition-colors shadow-lg hover:shadow-xl">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-6 space-y-2">
+                    <a href="index.html#home" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Home</a>
+                    <a href="index.html#About Us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">About Us</a>
+                    <a href="index.html#services" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Services</a>
+                    <a href="team.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-light transition-colors">Team</a>
+                    <a href="index.html#why-us" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Our Methodology</a>
+                    <a href="index.html#contact" class="block px-3 py-3 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-light transition-colors">Contact</a>
+                    <a href="index.html#contact" class="block mx-3 mt-4 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary transition-colors text-center">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-28 pb-8 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <a href="team.html" class="text-gray-600 hover:text-primary transition-colors">Team</a>
+                <i class="fas fa-chevron-right text-gray-400 text-xs"></i>
+                <span class="text-primary font-semibold">Maryam Alyamani</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <!-- Left - Photo -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-32">
+                        <img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=600&q=80"
+                             alt="Maryam Alyamani"
+                             class="w-full rounded-2xl shadow-2xl">
+
+                        <!-- Social Links -->
+                        <div class="mt-8 flex justify-center space-x-4">
+                            <a href="#" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-white text-lg"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Twitter">
+                                <i class="fab fa-twitter text-white text-lg"></i>
+                            </a>
+                            <a href="mailto:mimi.yamani@gmail.com" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Email">
+                                <i class="fas fa-envelope text-white text-lg"></i>
+                            </a>
+                            <a href="https://www.themhubagency.com" target="_blank" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center hover:bg-secondary transition-colors" aria-label="Website">
+                                <i class="fas fa-globe text-white text-lg"></i>
+                            </a>
+                        </div>
+
+                        <!-- Back Button -->
+                        <div class="mt-8">
+                            <a href="team.html" class="block w-full text-center bg-white border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                <i class="fas fa-arrow-left mr-2"></i> Back to Team
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right - Information -->
+                <div class="lg:col-span-2">
+                    <h1 class="text-5xl font-bold text-dark mb-4">Maryam Alyamani</h1>
+                    <p class="text-2xl text-primary font-semibold mb-2">Marketing Communications Expert</p>
+                    <p class="text-lg text-gray-500 font-medium mb-6">Founder — The M-HUB Agency · Published Author</p>
+                    <!-- Personal Branding Tags -->
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="px-4 py-1.5 bg-primary text-white rounded-full text-sm font-semibold">Crafting Compelling &amp; Creative Stories</span>
+                        <span class="px-4 py-1.5 bg-primary text-white rounded-full text-sm font-semibold">Driving Digital Transformation</span>
+                        <span class="px-4 py-1.5 bg-dark text-white rounded-full text-sm font-semibold">Woman Leader in the Automotive Industry</span>
+                    </div>
+                    <div class="w-24 h-1 bg-primary mb-8"></div>
+
+                    <!-- About Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-user-circle text-primary mr-3"></i>
+                            About
+                        </h2>
+                        <div class="prose prose-lg max-w-none">
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Maryam Alyamani is a Marketing Communications expert with over 16 years of experience spanning
+                                journalism, press, communications, public relations, and digital marketing. Based in Jeddah, KSA,
+                                she brings together editorial depth, brand strategy, and data-driven digital execution into an
+                                integrated communications practice.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                She is the Founder of The M-HUB Agency, a full-service marketing and communications firm, and a
+                                published author of the children's novel <em>Princess Liliana</em>. Her client portfolio spans
+                                FMCG, automotive, hospitality, healthcare, and government sectors.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                As Head of Communications at Mohammed Yousuf Naghi Motors — the Ford and Lincoln distributor in
+                                Saudi Arabia — she delivered transformational results, growing digital lead contributions to retail
+                                sales from 7–12% to 40%, achieving 2,370% growth in after-sales lead generation, and being
+                                recognized as a leading distributor in the MENA region for campaign management and digital excellence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Impact by Numbers -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-chart-bar text-primary mr-3"></i>
+                            Impact by Numbers
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 text-white text-center">
+                                <p class="text-4xl font-bold mb-2">2,370%</p>
+                                <p class="text-base font-semibold opacity-90">After-Sales Lead Growth</p>
+                                <p class="text-sm opacity-75 mt-1">114% business overachievement</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 text-white text-center">
+                                <p class="text-4xl font-bold mb-2">40%</p>
+                                <p class="text-base font-semibold opacity-90">Digital Lead Contribution</p>
+                                <p class="text-sm opacity-75 mt-1">Up from 7–12% — 4x–5x growth</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 text-white text-center">
+                                <p class="text-4xl font-bold mb-2">900%</p>
+                                <p class="text-base font-semibold opacity-90">Agency Annual Growth</p>
+                                <p class="text-sm opacity-75 mt-1">50+ clients managed at M-HUB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-briefcase text-primary mr-3"></i>
+                            Work Experience
+                        </h2>
+                        <div class="space-y-6">
+
+                            <!-- MYNM -->
+                            <div class="border-l-4 border-primary pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Head of Communications</h3>
+                                <p class="text-gray-500 font-medium mb-1">Mohammed Yousuf Naghi Motors (Ford / Lincoln / After Sales)</p>
+                                <p class="text-primary font-semibold mb-3">2023 – Present</p>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Leads the Communications function across 14 retail branches and 18 after-sales branches, driving
+                                    brand growth and customer engagement for Ford &amp; Lincoln. Develops and executes integrated
+                                    marketing communications strategies across traditional, digital, and experiential channels,
+                                    leveraging consumer insights and analytics to optimize messaging, generate qualified leads,
+                                    and accelerate sales.
+                                </p>
+
+                                <!-- Awards -->
+                                <div class="bg-white border border-primary/20 rounded-xl p-5 mb-4">
+                                    <h4 class="text-base font-bold text-dark mb-3 flex items-center">
+                                        <i class="fas fa-trophy text-primary mr-2"></i> Awards
+                                    </h4>
+                                    <ul class="space-y-2 text-gray-600 text-sm">
+                                        <li class="flex items-start"><i class="fas fa-medal text-primary mt-0.5 mr-2 flex-shrink-0"></i>Ford Middle East — Outstanding Performance in Digital Media Campaigns</li>
+                                        <li class="flex items-start"><i class="fas fa-medal text-primary mt-0.5 mr-2 flex-shrink-0"></i>Ford Middle East — Outstanding Distributor Event Execution</li>
+                                        <li class="flex items-start"><i class="fas fa-medal text-primary mt-0.5 mr-2 flex-shrink-0"></i>Ford MYNM (2024) — Outstanding Performer for Media Buying &amp; Digital Campaign Achievements</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Key Achievements -->
+                                <div class="bg-white border border-primary/20 rounded-xl p-5">
+                                    <h4 class="text-base font-bold text-dark mb-3 flex items-center">
+                                        <i class="fas fa-star text-primary mr-2"></i> Key Achievements
+                                    </h4>
+                                    <ul class="space-y-2 text-gray-600 text-sm list-disc list-inside">
+                                        <li>Grew Ford's retail sales contribution from digital leads from 7–12% to 40% in 2023 (4x–5x growth within the same marketing budget)</li>
+                                        <li>Achieved 2,370% growth in after-sales lead generation, resulting in 114% overachievement in business growth</li>
+                                        <li>Grew Lincoln's retail sales contribution from digital leads to 50% by mid-2024</li>
+                                        <li>Delivered 10x growth in digital leads in H1 2024 vs. 2023 without increasing marketing budget</li>
+                                        <li>Invited to present a case study at the Ford ME Marketing Summit</li>
+                                        <li>Named leading distributor in the MENA region for campaign management and lead generation best practices</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- M-HUB -->
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Founder &amp; CEO</h3>
+                                <p class="text-gray-500 font-medium mb-1">The M-HUB Agency</p>
+                                <p class="text-gray-500 font-semibold mb-3">2020 – 2024</p>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Founded and led The M-HUB Marketing &amp; Communications Agency, offering brand development,
+                                    corporate communications, marketing strategy, website development, social media management,
+                                    and Google SEO campaigns.
+                                </p>
+                                <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                                    <li>Achieved 900% annual agency growth</li>
+                                    <li>Managed integrated communications for 50+ clients</li>
+                                    <li>Built a full communications plan for a startup factory now set for IPO</li>
+                                </ul>
+                            </div>
+
+                            <!-- Amna Bakery -->
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Business Development Consultant</h3>
+                                <p class="text-gray-500 font-medium mb-1">Amna Bakery &amp; Ministry of Sports F&amp;B Stadium Operators</p>
+                                <p class="text-gray-500 font-semibold mb-3">2020 – 2022</p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Consulted on business development for startups and stadium F&amp;B operators, achieving 5x sales
+                                    revenue growth within one year through strategy implementation. Also served as Digital
+                                    Transformation Consultant for Al-Bilad Newspaper — the first newspaper in KSA, supported by
+                                    the Ministry of Media.
+                                </p>
+                            </div>
+
+                            <!-- Earlier Career -->
+                            <div class="border-l-4 border-gray-300 pl-6">
+                                <h3 class="text-xl font-bold text-dark mb-3">Earlier Career</h3>
+                                <div class="space-y-3 text-sm text-gray-600">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <span class="font-semibold text-dark">Media Spokesperson</span>
+                                            <span class="text-gray-400 mx-2">·</span>SBC &amp; Rotana
+                                        </div>
+                                        <span class="text-gray-400 text-xs whitespace-nowrap ml-4">~2016–2018</span>
+                                    </div>
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <span class="font-semibold text-dark">Marketing Communications Manager</span>
+                                            <span class="text-gray-400 mx-2">·</span>Al Wasatt Network
+                                        </div>
+                                        <span class="text-gray-400 text-xs whitespace-nowrap ml-4">~2012–2014</span>
+                                    </div>
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <span class="font-semibold text-dark">Marketing Communications Manager</span>
+                                            <span class="text-gray-400 mx-2">·</span>SpineFix Center
+                                        </div>
+                                        <span class="text-gray-400 text-xs whitespace-nowrap ml-4">~2013–2015</span>
+                                    </div>
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <span class="font-semibold text-dark">PR Executive</span>
+                                            <span class="text-gray-400 mx-2">·</span>Manning Selvage &amp; Lee (Leo Burnett Group)
+                                        </div>
+                                        <span class="text-gray-400 text-xs whitespace-nowrap ml-4">~2009–2011</span>
+                                    </div>
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <span class="font-semibold text-dark">Journalist / Writer</span>
+                                            <span class="text-gray-400 mx-2">·</span>Arab News, Time Out Dubai, Time Out Travel Guides
+                                        </div>
+                                        <span class="text-gray-400 text-xs whitespace-nowrap ml-4">~2008–2010</span>
+                                    </div>
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <span class="font-semibold text-dark">Marketing Intern</span>
+                                            <span class="text-gray-400 mx-2">·</span>Jeddah Chamber of Commerce
+                                        </div>
+                                        <span class="text-gray-400 text-xs whitespace-nowrap ml-4">~2003</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Notable Clients -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-handshake text-primary mr-3"></i>
+                            Notable Clients
+                        </h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">Anaam Group</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">SpineFix</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">Amna Bakery</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">Wasit Saudi Corp</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">Monkey's Lounge</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">GYRO Restaurant &amp; Café</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">Merze Restaurant &amp; Cafe</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">MVC</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">UKIYO</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">SightScape</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">SERB</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">Neama Ventures</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">ARW</span>
+                            <span class="px-4 py-2 bg-dark/5 text-dark rounded-full font-medium text-sm">Musafat Club</span>
+                        </div>
+                    </div>
+
+                    <!-- Areas of Expertise -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-star text-primary mr-3"></i>
+                            Areas of Expertise
+                        </h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Digital Marketing</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Marketing Communications</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Public Relations</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Brand Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Journalism &amp; Copywriting</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Website Development</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">SEO / SEM</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Lead Generation</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Campaign Management</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Management &amp; Leadership</span>
+                            <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold">Trilingual Communications</span>
+                        </div>
+                    </div>
+
+                    <!-- Education & Publications -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-graduation-cap text-primary mr-3"></i>
+                            Education &amp; Publications
+                        </h2>
+                        <div class="space-y-4 mb-8">
+                            <div class="bg-light p-6 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-university text-primary text-2xl mr-4 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-dark">Bachelor of Corporate Communications</h4>
+                                        <p class="text-sm text-gray-600">American University of Paris · ~2006</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-dark mb-4">Publications &amp; Press</h3>
+                        <div class="space-y-4">
+                            <div class="bg-light p-6 rounded-lg flex items-start">
+                                <i class="fas fa-book text-primary text-2xl mr-4 flex-shrink-0 mt-1"></i>
+                                <div>
+                                    <h4 class="text-lg font-bold text-dark mb-1">Princess Liliana</h4>
+                                    <p class="text-sm text-gray-600">Published Author · Children's Novel</p>
+                                </div>
+                            </div>
+                            <div class="bg-light p-6 rounded-lg flex items-start">
+                                <i class="fas fa-newspaper text-primary text-2xl mr-4 flex-shrink-0 mt-1"></i>
+                                <div>
+                                    <h4 class="text-lg font-bold text-dark mb-2">Press Features &amp; Media</h4>
+                                    <div class="space-y-2">
+                                        <a href="https://www.arabnews.com/node/271716" target="_blank" class="flex items-center text-primary hover:underline text-sm">
+                                            <i class="fas fa-external-link-alt mr-2 text-xs"></i>Arab News Feature
+                                        </a>
+                                        <a href="https://www.alguardian.com/62562" target="_blank" class="flex items-center text-primary hover:underline text-sm">
+                                            <i class="fas fa-external-link-alt mr-2 text-xs"></i>Al Guardian Press
+                                        </a>
+                                        <a href="https://www.youtube.com/watch?v=iWfpSN0ep2E" target="_blank" class="flex items-center text-primary hover:underline text-sm">
+                                            <i class="fab fa-youtube mr-2 text-xs"></i>YouTube Media Appearance
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-dark mb-6 flex items-center">
+                            <i class="fas fa-quote-left text-primary mr-3"></i>
+                            Recommendations
+                        </h2>
+                        <div class="space-y-6">
+
+                            <div class="bg-light rounded-2xl p-8 relative">
+                                <i class="fas fa-quote-left text-primary/20 text-5xl absolute top-6 right-6"></i>
+                                <p class="text-gray-600 leading-relaxed italic mb-6">
+                                    "Maryam is a bright, hardworking and a talented communications expert. I have known her since she was a college student, a time when she stood out as a star employee who did whatever it took to get her work published in the media. Her diligence, integrity and natural sense of leadership has allowed Maryam to excel in fields beyond traditional media, PR and journalism. I am very proud to see what she has achieved and accomplished over the years and to have played a role in this as her mentor. She has developed a lot since beginning as an 18-year-old journalist to now becoming a published author and talented marketing communications professional. Maryam is a true asset to any organization and I wish her the best of luck for the future."
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-bold text-dark text-sm">Director General</p>
+                                        <p class="text-primary text-sm">Al-Bilad EST. For Journalism and Publishing</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light rounded-2xl p-8 relative">
+                                <i class="fas fa-quote-left text-primary/20 text-5xl absolute top-6 right-6"></i>
+                                <p class="text-gray-600 leading-relaxed italic mb-6">
+                                    "I highly recommend Maryam, a bright dedicated marketing Professional both from a strategical and operating standpoint. She will do whatever it takes to get the job done. Her ability to care and to convince her surrounding is truly bluffing. This stems from her passion and her understanding of market demands. Everything in her mind is so well organized that she is able to synthesize a clear answer for any question you ask. Her writing and selling skills are definitely outstanding. From sharing to collecting information, Maryam knows how to foster team collaboration. She has the ability to identify, analyse and resolve any issues that she is facing. Maryam will definitely be a very effective resource for any organization she chooses to join. She has an amazing spirit."
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-bold text-dark text-sm">Co-Founder, Le Murmure De La Cave</p>
+                                        <p class="text-primary text-sm">Ex Digital Marketer at Google</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-light rounded-2xl p-8 relative">
+                                <i class="fas fa-quote-left text-primary/20 text-5xl absolute top-6 right-6"></i>
+                                <p class="text-gray-600 leading-relaxed italic mb-6">
+                                    "I've joined the company around the same time with Maryam. She was handling PR and marketing communications. Regardless of her background in print and traditional media, she improved herself and learned a lot in a short interval, and became a crucial part of the team handling PR, marketing communications and digital content all by herself. She is a very passionate, responsible and fun to work with individual."
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="font-bold text-dark text-sm">Senior UX / Frontend Developer</p>
+                                        <p class="text-primary text-sm">Al Wasatt Network</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-briefcase w-6 text-xl mt-1"></i>
+                                <div class="ml-4">
+                                    <p class="text-sm opacity-90">Position</p>
+                                    <p class="text-lg font-semibold">Marketing Communications Expert</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt w-6 text-xl"></i>
+                                <span class="ml-4 text-lg">Jeddah, Saudi Arabia</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt w-6 text-xl"></i>
+                                <a href="tel:+966530444888" class="ml-4 text-lg hover:underline">+966 53 044 4888</a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope w-6 text-xl"></i>
+                                <a href="mailto:mimi.yamani@gmail.com" class="ml-4 text-lg hover:underline">mimi.yamani@gmail.com</a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-globe w-6 text-xl"></i>
+                                <a href="https://www.themhubagency.com" target="_blank" class="ml-4 text-lg hover:underline">www.themhubagency.com</a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt w-6 text-xl"></i>
+                                <a href="#" class="ml-4 text-lg hover:underline">Schedule a Meeting</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Team Members Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-dark text-center mb-4">Meet Other Team Members</h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="team-bob.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/bob.jpg" alt="Ehab Gawad" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Ehab Gawad</h3>
+                        <p class="text-primary font-semibold">Managing Partner</p>
+                    </div>
+                </a>
+                <a href="team-amr-nada.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/amr_nada.jpeg" alt="Dr. Amr Nada" class="w-full h-64 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Dr. Amr Nada</h3>
+                        <p class="text-primary font-semibold">International Master Trainer</p>
+                    </div>
+                </a>
+                <a href="team-abdulrahman-aljifri.html" class="team-member-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/Abdulrahma_ Aljifri.jpeg" alt="Abdulrahman Aljifri" class="w-full h-64 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Abdulrahman Aljifri</h3>
+                        <p class="text-primary font-semibold">HR & Commercial Capabilities</p>
+                    </div>
+                </a>
+                <a href="team.html" class="team-member-card bg-gradient-to-br from-primary to-secondary rounded-xl shadow-lg overflow-hidden flex items-center justify-center p-6 text-white hover:from-secondary hover:to-primary">
+                    <div class="text-center">
+                        <i class="fas fa-users text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">View All Team Members</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="mb-6">
+                        <img src="images/tritalent-logo.png" alt="TriTalent - People Process Performance" class="h-12 w-auto mb-4">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner in building exceptional workforces and creating thriving workplace cultures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Twitter"><i class="fab fa-twitter text-white"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-white"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#About Us" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="team.html" class="hover:text-primary transition-colors">Team</a></li>
+                        <li><a href="index.html#why-us" class="hover:text-primary transition-colors">Why Choose Us</a></li>
+                        <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="assessment-centers.html" class="hover:text-primary transition-colors">Assessment Centers</a></li>
+                        <li><a href="leadership-development.html" class="hover:text-primary transition-colors">Leadership Development</a></li>
+                        <li><a href="soft-skills-training.html" class="hover:text-primary transition-colors">Soft Skills Training</a></li>
+                        <li><a href="culture-engagement.html" class="hover:text-primary transition-colors">Culture &amp; Engagement</a></li>
+                        <li><a href="executive-coaching.html" class="hover:text-primary transition-colors">Executive Coaching</a></li>
+                        <li><a href="talent-development-consulting.html" class="hover:text-primary transition-colors">Talent Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 w-5"></i>
+                            <span class="ml-3">Saudi Arabia &amp; the GCC</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary w-5"></i>
+                            <a href="mailto:info@tri-talent.com" class="ml-3 hover:text-primary transition-colors">info@tri-talent.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-globe text-primary w-5"></i>
+                            <a href="https://tri-talent.com/" target="_blank" class="ml-3 hover:text-primary transition-colors">www.tri-talent.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-center md:text-left">&copy; 2026 Tritalent. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>
