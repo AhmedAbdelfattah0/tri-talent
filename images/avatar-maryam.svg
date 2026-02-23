@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" role="img" aria-label="Maryam Alyamani profile avatar">
+  <defs>
+
+    <!-- Background gradient: light teal tint matching brand light/accent -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ddf2f1"/>
+      <stop offset="100%" stop-color="#eef4f7"/>
+    </linearGradient>
+
+    <!-- Hijab gradient: primary brand color #52A8A6 -->
+    <linearGradient id="hijabGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7ecac8"/>
+      <stop offset="100%" stop-color="#3d9896"/>
+    </linearGradient>
+
+    <!-- Blazer gradient: dark brand color -->
+    <linearGradient id="blazerGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c3e52"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+
+    <!-- Face radial gradient: neutral skin tone, slight warmth highlight -->
+    <radialGradient id="faceGrad" cx="42%" cy="36%" r="58%">
+      <stop offset="0%" stop-color="#fcebd6"/>
+      <stop offset="100%" stop-color="#f0c89a"/>
+    </radialGradient>
+
+    <!-- Subtle outer shadow for portrait depth -->
+    <filter id="portraitShadow" x="-8%" y="-4%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000022"/>
+    </filter>
+
+  </defs>
+
+  <!-- ── LAYER 1: Background ── -->
+  <rect width="600" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Soft radial glow — portrait atmosphere -->
+  <radialGradient id="glowGrad" cx="50%" cy="42%" r="52%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="600" height="800" fill="url(#glowGrad)"/>
+
+  <!-- ── LAYER 2: Blazer / Body ── -->
+  <!-- V-neck blazer shape filling lower portion -->
+  <path d="
+    M 0 800
+    V 562
+    C 72 518, 156 494, 214 478
+    L 274 540
+    L 300 548
+    L 326 540
+    L 386 478
+    C 444 494, 528 518, 600 562
+    V 800
+    Z
+  " fill="url(#blazerGrad)"/>
+
+  <!-- ── LAYER 3: White shirt / collar ── -->
+  <path d="
+    M 274 460
+    L 262 548
+    Q 300 559 338 548
+    L 326 460
+    Q 313 474 300 478
+    Q 287 474 274 460
+    Z
+  " fill="#ffffff"/>
+
+  <!-- ── LAYER 4: Hijab drape over shoulders and neck ── -->
+  <!--
+    Starts at the lower-left of the hijab head oval (~198, 334),
+    flows outward over shoulders, across bottom (~y=548), back up right.
+    Drawn BEFORE hijab head oval and face so they sit on top.
+  -->
+  <path d="
+    M 198 334
+    C 140 392, 104 462, 88 532
+    C 90 572, 150 588, 212 570
+    C 256 556, 278 548, 300 546
+    C 322 548, 344 556, 388 570
+    C 450 588, 510 572, 512 532
+    C 496 462, 460 392, 402 334
+    Z
+  " fill="url(#hijabGrad)" filter="url(#portraitShadow)"/>
+
+  <!-- ── LAYER 5: Hijab head covering ── -->
+  <!--
+    Slightly larger oval than face, centered slightly above face center.
+    Creates the characteristic hijab frame around the face.
+    Visible area: ~30 px border around face sides and top.
+    Bottom overlaps with chin — hijab frames face fully.
+  -->
+  <ellipse cx="300" cy="270" rx="118" ry="128" fill="url(#hijabGrad)" filter="url(#portraitShadow)"/>
+
+  <!-- ── LAYER 6: Face oval — NO FACIAL FEATURES ── -->
+  <!--
+    Pure skin-tone oval. Completely blank by design.
+    Covers center of hijab head oval.
+  -->
+  <ellipse cx="300" cy="296" rx="88" ry="104" fill="url(#faceGrad)"/>
+
+  <!-- Extremely subtle face highlight (top-left) for slight dimension, no features -->
+  <ellipse cx="284" cy="268" rx="28" ry="34" fill="#ffffff" opacity="0.09"/>
+
+  <!-- ── Bottom accent bar matching brand ── -->
+  <rect x="0" y="792" width="600" height="8" fill="#52A8A6" opacity="0.35" rx="0"/>
+
+</svg>
